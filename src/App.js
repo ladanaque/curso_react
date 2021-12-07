@@ -8,6 +8,27 @@ import UserCard from "./components/UserCard/UserCard";
 
 
 class App extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      counter: 0,
+      name : 'Luis',
+    };
+  }
+
+  handlerCounterUp = () => {
+    this.setState({counter: this.state.counter + 1});
+  }
+
+  handlerCounterDown = () => {
+    this.setState({counter: this.state.counter - 1});
+  }
+
+  handlerUpdateName = () => {
+    this.setState({name: this.state.name = 'Juan'});
+  }
+
   render() {
     return (
       <div className='App'>
@@ -38,6 +59,17 @@ class App extends React.Component {
           />
           
         </div>
+
+        <div className='CounterSection'>
+          <p>Counter: {this.state.counter} </p>
+          <div className='btn-section'>
+            <button onClick={this.handlerCounterUp}>Aumentar </button>
+            <button onClick={this.handlerCounterDown}>Disminuir </button>
+          </div>
+          <h3>{this.state.name}</h3>
+          <button onClick={this.handlerUpdateName}>Actualizar Nombre</button>
+        </div>
+
       </div>
     );
   }

@@ -6,15 +6,15 @@ const NavBar = () => {
         <nav className="container">
             <ul>
                 <li>
-                    <a>Inicio</a>
+                    <a href='https://www.google.com/'>Inicio</a>
                 </li>
 
                 <li>
-                    <a>Productos</a>
+                    <a href='https://www.google.com/'>Productos</a>
                 </li>
 
                 <li>
-                    <a>Contacto</a>
+                    <a href='https://www.google.com/'>Contacto</a>
                 </li>
             </ul>
 
